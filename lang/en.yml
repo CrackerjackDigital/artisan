@@ -1,0 +1,41 @@
+en:
+  ArtisanModel:
+    PLURALNAME: 'Artisan Models'
+    SINGULARNAME: 'Artisan Model'
+  ArtisanModule:
+    PLURALNAME: 'Artisan Modules'
+    SINGULARNAME: 'Artisan Module'
+  ArtisanPermissions:
+    PLURALNAME: 'Artisan Permissionss'
+    SINGULARNAME: 'Artisan Permissions'
+  ArtisanSection:
+    PLURALNAME: 'Page Rows'
+    SINGULARNAME: 'Page Row'
+  ArtisanModelAdmin:
+    MENUTITLE: 'Page Builder'
+  ArtisanBlock:
+    PLURALNAME: Blocks
+    SINGULARNAME: Block
+  ArtisanHasBlocksExtension:
+    Label: Blocks
+  ArtisanHasBlockLinkExtension:
+    Label: 'Link block to page'
+  ArtisanHasSectionsExtension:
+    Label: 'Page Rows'
+    UseSectionsFromOtherPageLabel: "Use sections from this page"
+  ArtisanHasExtraCSSClassesExtension:
+    Label: 'Extra CSS Classes'
+  ArtisanHasImagesExtension:
+    Label: Images
+  ArtisanHasWidthExtension:
+    Label: 'Column Widths'
+  ArtisanHasContentTypeExtension:
+    Label: 'Content Type'
+  ArtisanHasHeadingsExtension:
+    TitleLabel: 'Title'
+    SubTitleLabel: 'Sub-Title'
+  ArtisanUnsemanticExtension:
+    Label: 'Layout classes'
+  ArtisanHasFilesExtension:
+    Label: 'Files'
+

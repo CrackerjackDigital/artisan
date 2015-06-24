@@ -1,0 +1,17 @@
+{
+	"name": "crackerjackdigital/artisan",
+	"type": "silverstripe-module",
+	"description": "Rows and Blocks page builder module for SilerStripe",
+	"keywords": ["silverstripe", "builder", "layout"],
+	"authors": [{
+		"name": "Steve Wake",
+		"email": "steve@moveforward.co.nz"
+	}],
+	"require": {
+		"silverstripe/framework": "3.*"
+	},
+	"minimum-stability": "dev",
+	"extra": {
+		"installer-name": "artisan"
+	}
+}

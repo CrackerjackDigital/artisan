@@ -1,0 +1,28 @@
+---
+Name: artisan-content-types
+# ContentType meta-data is defined here rather than e.g. in the database.
+---
+ArtisanStaticContentTypeMetaDataProvider:
+  content_types:
+    ArtisanContentBlock:
+      Title: 'Content'
+      FormFields:
+        Content: [true, 'Content']
+    ArtisanFotoramaBlock:
+      Title: 'Image Gallery'
+      FormFields:
+        ArtisanImages: true
+    ArtisanImageCompareBlock:
+      Title: 'Before and After'
+      FormFields:
+        ArtisanImages: true
+    ArtisanCodeBlock:
+      Title: 'HTML'
+      FormFields:
+        Code: [false, 'Raw HTML']
+    ArtisanFormBlock:
+      Title: 'Form'
+    ArtisanFileListBlock:
+      Title: 'File List'
+      FormField:
+        ArtisanFiles: true

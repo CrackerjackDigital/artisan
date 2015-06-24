@@ -1,0 +1,9 @@
+digraph "/Library/WebServer/sites/crackerjack/hometech/htdocs/artisan/code/extensions" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_050edd66366d13764f98250ef6db77f6 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="code" fontname="Helvetica", fontsize="10", URL="dir_050edd66366d13764f98250ef6db77f6.html"]
+  dir_e2e33a7742d6302aacc6451350391c2c [shape=box, label="extensions", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_e2e33a7742d6302aacc6451350391c2c.html"];
+  }
+}

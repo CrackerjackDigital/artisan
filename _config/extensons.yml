@@ -1,0 +1,39 @@
+---
+Name: artisan-extensions
+After:
+  - 'framework/*'
+  - 'cms/*'
+---
+Image:
+  extensions:
+    - ArtisanImageExtension
+ArtisanSection:
+  extensions:
+    - ArtisanHasBlocksExtension
+    - ArtisanHasSortOrderExtension
+ArtisanBlock:
+  extensions:
+    - ArtisanHasUserDefinedFormExtension
+    - ArtisanHasContentTypeExtension
+    - ArtisanHasHeadingsExtension
+    - ArtisanHasHTMLExtension
+    - ArtisanHasImagesExtension
+    - ArtisanHasFilesExtension
+    - ArtisanHasSortOrderExtension
+    - ArtisanHasCodeExtension
+---
+Name: artisan-adaptable-form
+After:
+  - 'app/*'
+---
+ArtisanSection:
+  extensions:
+    - ArtisanAdaptableFormExtension
+ArtisanBlock:
+  extensions:
+    - ArtisanAdaptableFormExtension
+
+
+
+
+
