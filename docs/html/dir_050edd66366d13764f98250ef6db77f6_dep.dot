@@ -1,0 +1,12 @@
+digraph "/Library/WebServer/sites/crackerjack/hometech/htdocs/artisan/code" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_050edd66366d13764f98250ef6db77f6 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_050edd66366d13764f98250ef6db77f6.html"];
+    dir_050edd66366d13764f98250ef6db77f6 [shape=plaintext label="code"];
+    dir_215ef5a9088837fd4266c61ff06d9119 [shape=box label="admin" color="black" fillcolor="white" style="filled" URL="dir_215ef5a9088837fd4266c61ff06d9119.html"];
+    dir_e2e33a7742d6302aacc6451350391c2c [shape=box label="extensions" color="black" fillcolor="white" style="filled" URL="dir_e2e33a7742d6302aacc6451350391c2c.html"];
+    dir_36cd362c05177bb23a664729be20e0de [shape=box label="models" color="black" fillcolor="white" style="filled" URL="dir_36cd362c05177bb23a664729be20e0de.html"];
+  }
+}

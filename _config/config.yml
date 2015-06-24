@@ -1,0 +1,11 @@
+---
+Name: artisan-config
+---
+Injector:
+  ContentTypeMetaDataProvider:
+    class: ArtisanStaticContentTypeMetaDataProvider
+  AdaptableFormMetaDataProvider:
+    class: ArtisanStaticContentTypeMetaDataProvider
+ArtisanModelAdmin:
+  managed_models:
+    - ArtisanSection
