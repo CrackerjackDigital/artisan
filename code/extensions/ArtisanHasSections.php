@@ -34,7 +34,7 @@ class ArtisanHasSectionsExtension extends ArtisanModelExtension {
 
     public function updateCMSFields(FieldList $fields) {
         if ($this->showOnCMSForm()) {
-            $fields->removeByName('Content');
+            $fields->replaceField('Content', new HiddenField('Content'));
 
             $gridField = $this->makeEditableGridField(
                 self::FieldName,
