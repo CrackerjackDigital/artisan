@@ -1,11 +1,11 @@
 <?php
 /**
- * Adds sections to model.
+ * Adds sections to model e.g. Page.
  *
  */
 class ArtisanHasSectionsExtension extends ArtisanModelExtension {
-    const FieldName = 'Sections';
-    const SectionModelClass = 'ArtisanSection';
+    const RelationshipName = 'Sections';
+    const RelatedModelClass = 'ArtisanSection';
 
     private static $tab_name = 'Root.PageRows';
 
@@ -13,50 +13,32 @@ class ArtisanHasSectionsExtension extends ArtisanModelExtension {
 
     private static $add_to_grid = false;
 
-    private static $show_use_sections_from_other_page = false;
-
-    private static $has_one = [
-        'UseSectionsFromOtherPage' => 'SiteTree'
-    ];
-
     private static $has_many = [
-        self::FieldName => self::SectionModelClass
+        self::RelationshipName => self::RelatedModelClass
     ];
 
     public function ArtisanHasSections() {
-        if ($this()->UseSectionsFromOtherPageID) {
-            if ($otherPage = SiteTree::get()->byID($this()->UseSectionsFromOtherPageID)) {
-                return $otherPage->ArtisanHasSections()->Sort(ArtisanHasSortOrderExtension::FieldName);
-            }
-        }
-        return $this()->{self::FieldName}()->Sort(ArtisanHasSortOrderExtension::FieldName);
+        return $this()->{self::RelationshipName}()->Sort(ArtisanHasSortOrderExtension::FieldName);
     }
 
     public function updateCMSFields(FieldList $fields) {
+        // remove if already scaffolded so we can add as editable grid field
+        $fields->removeByName(self::RelationshipName);
+
         if ($this->showOnCMSForm()) {
+            // hide the content field if we have sections.
             $fields->replaceField('Content', new HiddenField('Content'));
 
             $gridField = $this->makeEditableGridField(
-                self::FieldName,
+                self::RelationshipName,
                 $this->getFieldLabel(),
-                self::SectionModelClass,
-                $this()->Sections()
+                self::RelatedModelClass,
+                $this->ArtisanHasSections()
             );
             $fields->addFieldToTab(
                 self::get_config_setting('tab_name'),
                 $gridField
             );
-            if (self::get_config_setting('show_use_sections_from_other_page')) {
-
-                $fields->addFieldToTab(
-                    self::get_config_setting('tab_name'),
-                    new TreeDropdownField(
-                        'UseSectionsFromOtherPageID',
-                        $this->getFieldLabel(),
-                        'SiteTree'
-                    )
-                );
-            }
         }
     }
 

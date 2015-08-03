@@ -31,6 +31,15 @@ class ArtisanModel extends DataObject {
     }
 
     /**
+     * Need to provide access to the model for duplication.
+     *
+     * @return DataModel|null
+     */
+    public function getModel() {
+        return $this->model;
+    }
+
+    /**
      * Can create if in 'Content Managers' group.
      * @param null $member
      * @return bool|void

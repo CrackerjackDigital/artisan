@@ -3,9 +3,10 @@
  * Represents a block in an Artisan Section. Extend
  */
 class ArtisanBlock extends ArtisanModel {
+	const RelationshipName = 'Section';
 
 	private static $has_one = [
-		'Section' => 'ArtisanSection',
+		self::RelationshipName => 'ArtisanSection',
 	];
 	private static $summary_fields = [
 	];
